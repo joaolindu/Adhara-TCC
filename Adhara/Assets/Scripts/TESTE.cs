@@ -44,10 +44,10 @@ public class TESTE : MonoBehaviour
        }
 
        // Limitar a velocidade máxima
-       //velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);
+       velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);
 
        // Mover o objeto com a velocidade calculada
-       //transform.Translate(velocityX * Time.deltaTime, 0, 0);
+       transform.Translate(velocityX * Time.deltaTime, 0, 0);
     }*/
     }
     

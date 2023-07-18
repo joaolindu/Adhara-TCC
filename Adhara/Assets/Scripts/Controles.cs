@@ -10,6 +10,7 @@ public class Controles : MonoBehaviour
     
     public float acceleration;
     public float slowdown;
+    public float maxSpeed;
     private float inputDirection;
     private float direction;
     private float velocityX;
@@ -28,6 +29,7 @@ public class Controles : MonoBehaviour
     {
         movimentacao();
         Jump();
+        MovimentacaoGelo();
     }
     
     void movimentacao()
@@ -44,29 +46,42 @@ public class Controles : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        //ice
-        if (inputDirection != 0)
-        {
-            if (velocityX <= 0)
-            {
-                direction = inputDirection;
-            }
+    }
 
-            if (direction == inputDirection)
+    void MovimentacaoGelo()
+    {
+        float movement = Input.GetAxis("Horizontal"); //se pressionar botao para a direita, valor max e 1 se pressionar para a esquerda valor max e -1
+        rig.velocity = new Vector2(movement * velocidade, rig.velocity.y); //adiciona velocidade ao personagem no eixo x e y
+
+        if (Input.GetKeyDown())
+        {
+            if (movement != 0)
             {
-                velocityX += acceleration * Time.deltaTime;
-            }
-            else
-            {
-                velocityX -= acceleration * Time.deltaTime;
+                if (velocityX <= 0)
+                {
+                    direction = movement;
+                }
+
+                if (direction == movement)
+                {
+                    velocityX += acceleration * Time.deltaTime;
+                }
+                else
+                {
+                    velocityX -= acceleration * Time.deltaTime;
+                }
             }
         }
-        else
+        
+        else if ()
         {
             velocityX -= slowdown * Time.deltaTime;
         }
-        //velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed); // Limitar a velocidade máxima
-        //transform.Translate(velocityX * Time.deltaTime, 0, 0); // Mover o objeto com a velocidade calculada
+        // Limiditar a velocidade máxima
+        velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);
+
+        // Mover o objeto com a velocidade calculada
+        transform.Translate(velocityX * Time.deltaTime, 0, 0);
     }
     
     void Jump()
