@@ -53,29 +53,29 @@ public class Controles : MonoBehaviour
         float movement = Input.GetAxis("Horizontal"); //se pressionar botao para a direita, valor max e 1 se pressionar para a esquerda valor max e -1
         rig.velocity = new Vector2(movement * velocidade, rig.velocity.y); //adiciona velocidade ao personagem no eixo x e y
 
-        if (Input.GetKeyDown())
-        {
+        //if (Input.GetKeyDown())
+        //{
             if (movement != 0)
             {
                 if (velocityX <= 0)
                 {
-                    direction = movement;
+                    direction = Mathf.Sign(movement);
                 }
 
-                if (direction == movement)
+                if (direction == Mathf.Sign(movement))
                 {
-                    velocityX += acceleration * Time.deltaTime;
+                    velocityX += acceleration * Time.deltaTime * Mathf.Sign(movement);
                 }
                 else
                 {
-                    velocityX -= acceleration * Time.deltaTime;
+                    velocityX -= acceleration * Time.deltaTime * Mathf.Sign(movement);
                 }
             }
-        }
+        //}
         
-        else if ()
+        else
         {
-            velocityX -= slowdown * Time.deltaTime;
+            velocityX -= slowdown * Time.deltaTime * Mathf.Sign(velocityX);
         }
         // Limiditar a velocidade máxima
         velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);

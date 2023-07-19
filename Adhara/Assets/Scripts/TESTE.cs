@@ -64,3 +64,32 @@ public class TESTE : MonoBehaviour
 else:
    velocity.x -=  SLOWDOWN * delta*/
 
+
+
+
+/*if (movement != 0)
+{
+   if (velocityX >= 0)
+   {
+      direction = Mathf.Sign(movement);
+   }
+
+   if (direction == Mathf.Sign(movement))
+   {
+      velocityX += acceleration * Time.deltaTime * Mathf.Sign(movement);
+   }
+   else
+   {
+      velocityX -= acceleration * Time.deltaTime * Mathf.Sign(movement);
+   }
+}
+else
+{
+   velocityX -= slowdown * Time.deltaTime * Mathf.Sign(velocityX);
+}
+// Limiditar a velocidade máxima
+velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);
+
+// Mover o objeto com a velocidade calculada
+transform.Translate(velocityX * Time.deltaTime, 0, 0);*/
+
