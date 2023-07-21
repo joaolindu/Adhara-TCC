@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3803132001534226008}
   - component: {fileID: 4418144566682961548}
   - component: {fileID: -7447107803641073805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gelo que cai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
