@@ -21,10 +21,11 @@ public class Estalactites : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<Player>().ReceberDano();
             rig.bodyType = RigidbodyType2D.Dynamic;
             rig.gravityScale = Random.Range(2f, 8f);
             Destroy(this.gameObject, 1.5f);
