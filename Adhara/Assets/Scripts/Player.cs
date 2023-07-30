@@ -53,13 +53,4 @@ public class Player : MonoBehaviour
             Destroy(temp.gameObject, 2f);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("Bala"))
-        {
-            Destroy(col.gameObject);
-            Destroy(this.gameObject);
-        }
-    }
 }
