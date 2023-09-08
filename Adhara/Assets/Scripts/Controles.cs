@@ -6,7 +6,7 @@ using UnityEngine;
 public class Controles : MonoBehaviour
 { 
     public float velocidade;
-    public float jumpForce;
+    public float forcaDoPulo;
     
     public float acceleration;
     public float slowdown;
@@ -91,7 +91,7 @@ public class Controles : MonoBehaviour
             // "!" significa false ex: !isJumpg
             if (!isJumping) 
             {
-                rig.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse); //adiciona forca
+                rig.AddForce(new Vector2(0,forcaDoPulo),ForceMode2D.Impulse); //adiciona forca
                 isJumping = true;
             }
         }

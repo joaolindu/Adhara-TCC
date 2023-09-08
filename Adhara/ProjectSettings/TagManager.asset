@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bala
   - Enemy
+  - Escada
   layers:
   - Default
   - TransparentFX
