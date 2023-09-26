@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    //public Image barraDeVidaDoJogador;
+    
+    public Slider barraDeVidaDoJogador;
     
     public int vidaMaxima;
     public int vidaAtual;
@@ -22,8 +23,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         vidaAtual = vidaMaxima;
-        //barraDeVidaDoJogador.maxValue = vidaMaxima;
-        //barraDeVidaDoJogador.value = vidaMaxima;
+        barraDeVidaDoJogador.maxValue = vidaMaxima;
+        barraDeVidaDoJogador.value = vidaMaxima;
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
     public void ReceberDano()
     {
         vidaAtual -= 1;
-        //barraDeVidaDoJogador.value = vidaAtual;
+        barraDeVidaDoJogador.value = vidaAtual;
         if (vidaAtual <= 0)
         {
             Debug.Log("Game Over");
