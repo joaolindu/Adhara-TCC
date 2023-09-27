@@ -52,27 +52,23 @@ public class Controles : MonoBehaviour
     {
         float movement = Input.GetAxis("Horizontal"); //se pressionar botao para a direita, valor max e 1 se pressionar para a esquerda valor max e -1
         rig.velocity = new Vector2(movement * velocidade, rig.velocity.y); //adiciona velocidade ao personagem no eixo x e y
-
-        //if (Input.GetKeyDown())
-        //{
-            if (movement != 0)
+        if (movement != 0)
+        {
+            if (velocityX <= 0)
             {
-                if (velocityX <= 0)
-                {
-                    direction = Mathf.Sign(movement);
-                }
-
-                if (direction == Mathf.Sign(movement))
-                {
-                    velocityX += acceleration * Time.deltaTime * Mathf.Sign(movement);
-                }
-                else
-                {
-                    velocityX -= acceleration * Time.deltaTime * Mathf.Sign(movement);
-                }
+                direction = Mathf.Sign(movement);
             }
-        //}
-        
+
+            if (direction == Mathf.Sign(movement))
+            {
+                velocityX += acceleration * Time.deltaTime * Mathf.Sign(movement);
+            }
+            else
+            {
+                velocityX -= acceleration * Time.deltaTime * Mathf.Sign(movement);
+            }
+        }
+
         else
         {
             velocityX -= slowdown * Time.deltaTime * Mathf.Sign(velocityX);

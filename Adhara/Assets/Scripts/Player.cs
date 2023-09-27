@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    //energia
+    //public int energiaMaxima;
+    //public int energiaAtual;
+    
     
     public Slider barraDeVidaDoJogador;
     
@@ -22,6 +26,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //energiaAtual = energiaMaxima;
         vidaAtual = vidaMaxima;
         barraDeVidaDoJogador.maxValue = vidaMaxima;
         barraDeVidaDoJogador.value = vidaMaxima;
@@ -36,6 +41,7 @@ public class Player : MonoBehaviour
 
     public void ReceberDano()
     {
+        //energiaAtual -= dano;
         vidaAtual -= 1;
         barraDeVidaDoJogador.value = vidaAtual;
         if (vidaAtual <= 0)
@@ -43,6 +49,15 @@ public class Player : MonoBehaviour
             Debug.Log("Game Over");
         }
     }
+
+    /*public void ganharEnergia(int quantidadeDeEnergia)
+    {
+        energiaAtual += quantidadeDeEnergia;
+        if (energiaAtual > quantidadeDeEnergia)
+        {
+            energiaAtual = energiaMaxima;
+        }
+    }*/
 
     private void atirar()
     {

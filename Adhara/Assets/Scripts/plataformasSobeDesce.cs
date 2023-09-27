@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class plataformasSobeDesce : MonoBehaviour
 {
-    private bool moveDown;
-    public int velociade;
+    private bool moveDown = true;
+    public float velociade = 3f;
     public Transform pontoA;
     public Transform pontoB;
     
-   
     void Update()
     {
         if(transform.position.y > pontoA.position.y)
             moveDown = true;
         if (transform.position.y < pontoB.position.y)
             moveDown = false;
+        
         if (moveDown)
             transform.position = new Vector2(transform.position.x, transform.position.y - velociade * Time.deltaTime);
         else
