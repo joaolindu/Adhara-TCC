@@ -136,6 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5709bf6615c7ae468b0958731c88360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHeight: 3
-  moveSpeed: 5
-  pauseTime: 0.5
+  alturaMaxima: 5
+  velocidade: 5
+  tempoDePausa: 1
