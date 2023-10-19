@@ -16,12 +16,14 @@ public class Controles : MonoBehaviour
     private float velocityX;
 
     private Rigidbody2D rig;
+    private Animator Anim;
     
     private bool isJumping;
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        Anim = GetComponent<Animator>();
     }
     
     // Update is called once per frame
@@ -37,14 +39,21 @@ public class Controles : MonoBehaviour
         float movement = Input.GetAxis("Horizontal"); //se pressionar botao para a direita, valor max e 1 se pressionar para a esquerda valor max e -1
         rig.velocity = new Vector2(movement * velocidade, rig.velocity.y); //adiciona velocidade ao personagem no eixo x e y
     
-        if (movement > 0) //se move para a direita
+        if (movement > 0 && !isJumping) //se move para a direita
         {
+            Anim.SetInteger("Transition", 1);
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-    
-        if (movement < 0) //se move para a esquerda
+        
+        if (movement < 0 && !isJumping) //se move para a esquerda
         {
+            Anim.SetInteger("Transition", 1);
             transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        
+        if (movement == 0 && !isJumping)
+        {
+            Anim.SetInteger("Transition", 0);
         }
     }
 
@@ -87,6 +96,7 @@ public class Controles : MonoBehaviour
             // "!" significa false ex: !isJumpg
             if (!isJumping) 
             {
+                Anim.SetInteger("Transition", 2);
                 rig.AddForce(new Vector2(0,forcaDoPulo),ForceMode2D.Impulse); //adiciona forca
                 isJumping = true;
             }
