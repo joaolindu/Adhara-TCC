@@ -135,7 +135,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6692521954104376549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a281bd5b8d35946a7c6f373d6400b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0
+  velocidade: 3
   alturaMaxima: 5
   alturaMinima: -1
   tempoDeEspera: 2
@@ -167,7 +167,7 @@ MonoBehaviour:
   bala: {fileID: 4794348428501847573, guid: e4fb909d66699a04486fb71da9e58e24, type: 3}
   delay: 1.5
   localDeDisparo: {fileID: 6692521954657221530}
-  _Player: {fileID: 0}
+  _Player: {fileID: 2977185716862252956, guid: d23fd4ce6b9110148b7e948e0ec71ac6, type: 3}
 --- !u!1 &6692521954657221525
 GameObject:
   m_ObjectHideFlags: 0
