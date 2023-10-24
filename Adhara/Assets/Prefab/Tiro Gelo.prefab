@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8292344017557443618}
   - component: {fileID: 2386941228175630121}
   - component: {fileID: 4286696151561382551}
-  - component: {fileID: 5726671623588266522}
   - component: {fileID: 5372716654777008831}
   m_Layer: 0
   m_Name: Tiro Gelo
@@ -135,18 +134,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.94385606, y: 0.52395034}
   m_EdgeRadius: 0
---- !u!114 &5726671623588266522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794348428501847573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10386120bbb06664e9b1b81956bac226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5372716654777008831
 MonoBehaviour:
   m_ObjectHideFlags: 0

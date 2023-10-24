@@ -7,19 +7,27 @@ public class Controles : MonoBehaviour
 { 
     public float velocidade;
     public float forcaDoPulo;
+    private bool isJumping;
     
+    //Fase De Gelo
     public float acceleration;
     public float slowdown;
     public float maxSpeed;
     private float inputDirection;
     private float direction;
     private float velocityX;
-
+    
+    //Attack
+    public GameObject laserDoJogador; //projetil
+    public Transform localDeDiparo; //posição q sera disparado o tiro
+    private bool tiros;
+    public float forcaDoTiro; //velocidade do tiro
+    private bool isFire;
+    
     private Rigidbody2D rig;
     private Animator Anim;
+   
     
-    private bool isJumping;
-    // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -32,6 +40,7 @@ public class Controles : MonoBehaviour
         movimentacao();
         Jump();
         MovimentacaoGelo();
+        atirarLaser();
     }
     
     void movimentacao()
@@ -45,7 +54,7 @@ public class Controles : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         
-        if (movement < 0 && !isJumping) //se move para a esquerda
+        if (movement < 0 && !isJumping && !isFire) //se move para a esquerda
         {
             Anim.SetInteger("Transition", 1);
             transform.eulerAngles = new Vector3(0, 180, 0);
@@ -100,6 +109,21 @@ public class Controles : MonoBehaviour
                 rig.AddForce(new Vector2(0,forcaDoPulo),ForceMode2D.Impulse); //adiciona forca
                 isJumping = true;
             }
+        }
+    }
+    private void atirarLaser()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            isFire = true;
+            Anim.SetInteger("Transition", 3);
+        }
+        if (tiros == true)
+        {
+            GameObject temp = Instantiate(laserDoJogador);
+            temp.transform.position = localDeDiparo.position;
+            temp.GetComponent<Rigidbody2D>().velocity = new Vector2(forcaDoTiro, 0);
+            Destroy(temp.gameObject);
         }
     }
     void OnCollisionEnter2D(Collision2D coll) // chamado todas as vezes que o player encosta em outro objeto com colisao

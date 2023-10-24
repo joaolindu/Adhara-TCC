@@ -17,10 +17,10 @@ public class Player : MonoBehaviour
     public int vidaMaxima;
     public int vidaAtual;
 
-    public GameObject laser; //projetil
+    /*public GameObject laser; //projetil
     public Transform arma; //posição q sera disparado o tiro
     private bool tiros;
-    public float forcaDoTiro; //velocidade do tiro
+    public float forcaDoTiro; //velocidade do tiro*/
     //private bool flipX = false;
 
     // Start is called before the first frame update
@@ -35,8 +35,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tiros = Input.GetButtonDown("Fire1");
-        atirar();
+        //tiros = Input.GetButtonDown("Fire1");
     }
 
     public void ReceberDano()
@@ -49,18 +48,10 @@ public class Player : MonoBehaviour
             Debug.Log("Game Over");
         }
     }
-
-    /*public void ganharEnergia(int quantidadeDeEnergia)
+    
+    /*private void atirar()
     {
-        energiaAtual += quantidadeDeEnergia;
-        if (energiaAtual > quantidadeDeEnergia)
-        {
-            energiaAtual = energiaMaxima;
-        }
-    }*/
-
-    private void atirar()
-    {
+        
         if (tiros == true)
         {
             GameObject temp = Instantiate(laser);
@@ -68,5 +59,16 @@ public class Player : MonoBehaviour
             temp.GetComponent<Rigidbody2D>().velocity = new Vector2(forcaDoTiro, 0);
             Destroy(temp.gameObject, 2f);
         }
-    }
+    }*/
 }
+
+
+
+/*public void ganharEnergia(int quantidadeDeEnergia)
+    {
+        energiaAtual += quantidadeDeEnergia;
+        if (energiaAtual > quantidadeDeEnergia)
+        {
+            energiaAtual = energiaMaxima;
+        }
+    }*/

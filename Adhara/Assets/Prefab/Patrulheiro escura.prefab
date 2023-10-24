@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6406485043125571695}
   m_Layer: 0
   m_Name: Patrulheiro escura
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 4
   rig: {fileID: 5857096797657573161}
+  vidaAtualDoInimigo: 3
+  vidaMaximaDoInimigo: 0

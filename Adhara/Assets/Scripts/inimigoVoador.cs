@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,14 @@ public class inimigoVoador : MonoBehaviour
 
     private bool subindo = true; // Indica se o inimigo está subindo ou descendo
     private float tempoPassado = 0f; // Contador de tempo
+    
+    public int vidaAtualDoInimigo;
+    public int vidaMaximaDoInimigo;
+
+    private void Start()
+    {
+        vidaAtualDoInimigo = vidaMaximaDoInimigo;
+    }
 
     private void Update()
     {
@@ -46,5 +55,15 @@ public class inimigoVoador : MonoBehaviour
             subindo = !subindo; // Inverte a direção após o tempo de espera
         }
     }
+
+    public void MachucarInimigo(int danoParaReceber)
+    {
+        vidaAtualDoInimigo -= danoParaReceber;
+        if(vidaAtualDoInimigo <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
 }
 

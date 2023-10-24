@@ -8,12 +8,14 @@ public class inimigoPatrulheiro : MonoBehaviour
     
     public float velocidade;
     public Rigidbody2D rig;
-    private bool faceFlip;
+    private bool faceFlip; //virada de rosto
+    public int vidaAtualDoInimigo;
+    public int vidaMaximaDoInimigo;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        vidaAtualDoInimigo = vidaMaximaDoInimigo;
     }
 
     // Update is called once per frame
@@ -40,5 +42,13 @@ public class inimigoPatrulheiro : MonoBehaviour
             faceFlip = !faceFlip;
         }
         FlipEnemy();
+    }
+    public void MachucarInimigo(int danoParaReceber)
+    {
+        vidaAtualDoInimigo -= danoParaReceber;
+        if(vidaAtualDoInimigo <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

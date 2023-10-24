@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6692521954104376548}
   m_Layer: 0
   m_Name: Atirador
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +152,8 @@ MonoBehaviour:
   alturaMaxima: 5
   alturaMinima: -1
   tempoDeEspera: 2
+  vidaAtualDoInimigo: 5
+  vidaMaximaDoInimigo: 5
 --- !u!114 &6692521954104376548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ffb316d0d5b494f8f233f67df8798b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bala: {fileID: 4794348428501847573, guid: e4fb909d66699a04486fb71da9e58e24, type: 3}
+  laserDoInimigo: {fileID: 4794348428501847573, guid: e4fb909d66699a04486fb71da9e58e24, type: 3}
   delay: 1.5
   localDeDisparo: {fileID: 6692521954657221530}
   _Player: {fileID: 2977185716862252956, guid: d23fd4ce6b9110148b7e948e0ec71ac6, type: 3}
+  velocidadeDoLaser: 10
+  danoParaDar: 2
 --- !u!1 &6692521954657221525
 GameObject:
   m_ObjectHideFlags: 0
