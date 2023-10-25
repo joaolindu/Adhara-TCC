@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class tiroTeleguiadoDoInimigo : MonoBehaviour
@@ -10,27 +11,32 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
 
     public Transform localDeDisparo;
     public Transform _Player;
-    
-    public float velocidadeDoLaser;
-    public int danoParaDar;
-    
+
+    private SpriteRenderer _renderer;
+
     // Start is called before the first frame update
     void Start()
     {
+        _Player = GameObject.FindWithTag("Player").transform;
         StartCoroutine("Atirar");
+        TryGetComponent(out _renderer);
     }
 
     // Update is called once per frame
     void Update()
     {
-        movimentarLaser();
+        _renderer.flipX = _Player.position.x >= transform.position.x;
+        //ovimentarLaser();
     }
 
     public void TiroTeleguiado()
     {
         localDeDisparo.right = _Player.transform.position - transform.position;
-        GameObject temporaria = Instantiate(laserDoInimigo, localDeDisparo.position, localDeDisparo.localRotation);
-        temporaria.GetComponent<Rigidbody2D>().velocity = localDeDisparo.right * 3;
+        GameObject temporaria = Instantiate(laserDoInimigo, localDeDisparo.position, quaternion.identity);
+        localDeDisparo.LookAt(_Player);
+        temporaria.GetComponent<Rigidbody2D>().velocity = localDeDisparo.forward * 3;
+       
+
     }
 
     IEnumerator Atirar()
@@ -38,10 +44,6 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
         yield return new WaitForSeconds(delay);
         TiroTeleguiado();
         StartCoroutine("Atirar");
-    }
-    private void movimentarLaser()
-    {
-        transform.Translate(Vector3.up * velocidadeDoLaser * Time.deltaTime);
     }
     void OnTriggerEnter2D(Collider2D col)
     {

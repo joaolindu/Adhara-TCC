@@ -1135,7 +1135,7 @@ SpriteRenderer:
   m_Size: {x: 4.125, y: 5.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1986643113
@@ -1165,8 +1165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13115d4f0addce74b9fd3ced1d9b1e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barraDeVidaDoJogador: {fileID: 0}
   vidaMaxima: 10
   vidaAtual: 0
-  laser: {fileID: 0}
-  arma: {fileID: 0}
-  forcaDoTiro: 0

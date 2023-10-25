@@ -7,21 +7,41 @@ public class inimigoPatrulheiro : MonoBehaviour
 {
     
     public float velocidade;
+    //public float distancia;
+    //private bool estaCerto;
+    //public Transform groundCheck;
+    
+    
     public Rigidbody2D rig;
     private bool faceFlip; //virada de rosto
     public int vidaAtualDoInimigo;
     public int vidaMaximaDoInimigo;
     
-    // Start is called before the first frame update
+    
     void Start()
     {
         vidaAtualDoInimigo = vidaMaximaDoInimigo;
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
-        transform.Translate(Vector2.left * velocidade * Time.deltaTime);
+       transform.Translate(Vector2.left * velocidade * Time.deltaTime);
+        /*RaycastHit2D ground = Physics2D.Raycast(groundCheck.position, Vector2.down, distancia);
+
+        if (ground.collider == false)
+        {
+            if (estaCerto == true)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                estaCerto = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+        }*/
+        FlipEnemy();
     }
     private void FlipEnemy()
     {
@@ -34,7 +54,6 @@ public class inimigoPatrulheiro : MonoBehaviour
             gameObject.transform.rotation = Quaternion.Euler(0,180,0);
         }
     }
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col != null && !col.collider.CompareTag("Player") && !col.collider.CompareTag("chao"))

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 373617036953874192}
   - component: {fileID: 7185093874093713707}
   - component: {fileID: 8245867129550514950}
-  - component: {fileID: 5474935088288027892}
   - component: {fileID: 5082047384860194291}
+  - component: {fileID: 3095401536163403477}
   m_Layer: 0
   m_Name: Patrulheiro fogo
   m_TagString: Enemy
@@ -108,32 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &5474935088288027892
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114988509624371197}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.099038124, y: -0.014148474}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 6.08}
-    newSize: {x: 6, y: 6.08}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.57555, y: 5.7687373}
-  m_EdgeRadius: 0
 --- !u!114 &5082047384860194291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +120,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c659d5170e0ed4ca50c2c82c3c3881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 4
+  velocidade: 3
   rig: {fileID: 8245867129550514950}
   vidaAtualDoInimigo: 3
   vidaMaximaDoInimigo: 0
+--- !u!61 &3095401536163403477
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114988509624371197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.08141613}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6, y: 6.08}
+    newSize: {x: 6, y: 6.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6, y: 5.9171677}
+  m_EdgeRadius: 0

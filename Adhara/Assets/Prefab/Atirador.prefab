@@ -123,7 +123,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6692521954104376551}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -148,10 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a281bd5b8d35946a7c6f373d6400b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 3
+  velocidade: 2
   alturaMaxima: 5
-  alturaMinima: -1
-  tempoDeEspera: 2
+  alturaMinima: 0
+  subindo: 0
   vidaAtualDoInimigo: 5
   vidaMaximaDoInimigo: 5
 --- !u!114 &6692521954104376548
