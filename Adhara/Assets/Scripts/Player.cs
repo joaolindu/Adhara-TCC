@@ -7,11 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    //energia
-    //public int energiaMaxima;
-    //public int energiaAtual;
-    
-    
+ 
     public Slider barraDeVidaDoJogador;
     
     public int vidaMaxima;
@@ -23,7 +19,7 @@ public class Player : MonoBehaviour
     public float forcaDoTiro; //velocidade do tiro*/
     //private bool flipX = false;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         //energiaAtual = energiaMaxima;
