@@ -152,8 +152,8 @@ MonoBehaviour:
   alturaMaxima: 5
   alturaMinima: 0
   subindo: 0
-  vidaAtualDoInimigo: 5
-  vidaMaximaDoInimigo: 5
+  vidaAtualDoInimigo: 3
+  vidaMaximaDoInimigo: 3
 --- !u!114 &6692521954104376548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +170,6 @@ MonoBehaviour:
   delay: 1.5
   localDeDisparo: {fileID: 6692521954657221530}
   _Player: {fileID: 2977185716862252956, guid: d23fd4ce6b9110148b7e948e0ec71ac6, type: 3}
-  velocidadeDoLaser: 10
-  danoParaDar: 2
 --- !u!1 &6692521954657221525
 GameObject:
   m_ObjectHideFlags: 0
