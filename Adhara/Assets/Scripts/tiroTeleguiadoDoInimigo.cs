@@ -26,7 +26,6 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
     void Update()
     {
         _renderer.flipX = _Player.position.x >= transform.position.x;
-        //ovimentarLaser();
     }
 
     public void TiroTeleguiado()
