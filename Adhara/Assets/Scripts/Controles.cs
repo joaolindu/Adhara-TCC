@@ -10,12 +10,12 @@ public class Controles : MonoBehaviour
     private bool isJumping;
     
     //Fase De Gelo
-    public float acceleration;
+    /*public float acceleration;
     public float slowdown;
     public float maxSpeed;
     private float inputDirection;
     private float direction;
-    private float velocityX;
+    private float velocityX;*/
     
     //Attack
     public GameObject laserDoJogador; //projetil
@@ -24,7 +24,7 @@ public class Controles : MonoBehaviour
     public float forcaDoTiro; //velocidade do tiro
     private bool isFire;
     
-    private Rigidbody2D rig;
+    public Rigidbody2D rig;
     private Animator Anim;
    
     
@@ -39,7 +39,7 @@ public class Controles : MonoBehaviour
     {
         movimentacao();
         Jump();
-        MovimentacaoGelo();
+        //MovimentacaoGelo();
         atirarLaser();
     }
     
@@ -66,7 +66,7 @@ public class Controles : MonoBehaviour
         }
     }
 
-    void MovimentacaoGelo()
+    /*void MovimentacaoGelo()
     {
         float movement = Input.GetAxis("Horizontal"); //se pressionar botao para a direita, valor max e 1 se pressionar para a esquerda valor max e -1
         rig.velocity = new Vector2(movement * velocidade, rig.velocity.y); //adiciona velocidade ao personagem no eixo x e y
@@ -96,7 +96,7 @@ public class Controles : MonoBehaviour
 
         // Mover o objeto com a velocidade calculada
         transform.Translate(velocityX * Time.deltaTime, 0, 0);
-    }
+    }*/
     
     void Jump()
     {
