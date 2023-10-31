@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -15,50 +16,51 @@ public class Controles : MonoBehaviour
     private bool tiros;
     public float forcaDoTiro; //velocidade do tiro
     private bool isFire;
+    private float movement;
     
     public Rigidbody2D rig;
-    private Animator Anim;
+    private Animator anim;
    
     
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        Anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
     
     // Update is called once per frame
     void Update()
     {
-        movimentacao();
         Jump();
-        atirarLaser();
-    }
-    
-    void movimentacao()
-    {
-        float movement = Input.GetAxis("Horizontal"); //se pressionar botao para a direita, valor max e 1 se pressionar para a esquerda valor max e -1
-        rig.velocity = new Vector2(movement * velocidade, rig.velocity.y); //adiciona velocidade ao personagem no eixo x e y
-    
-        if (movement > 0 && !isJumping) //se move para a direita
-        {
-            Anim.SetInteger("Transition", 1);
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-        
-        if (movement < 0 && !isJumping && !isFire) //se move para a esquerda
-        {
-            Anim.SetInteger("Transition", 1);
-            transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-        
-        if (movement == 0 && !isJumping)
-        {
-            Anim.SetInteger("Transition", 0);
-        }
+        Laser();
     }
 
+    private void FixedUpdate()
+    {
+        movimentacao();
+    }
+
+    void movimentacao()
+    {
+        movement = Input.GetAxis("Horizontal"); //se pressionar botao para a direita, valor max e 1 se pressionar para a esquerda valor max e -1
+        rig.velocity = new Vector2(movement * velocidade, rig.velocity.y); //adiciona velocidade ao personagem no eixo x e y
     
-    
+        
+        if (movement > 0 && !isJumping) //se move para a direita
+        {
+            anim.SetInteger("Transition", 1);
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        if (movement < 0 && !isJumping && !isFire) //se move para a esquerda
+        {
+            anim.SetInteger("Transition", 1);
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        if (movement == 0 && !isJumping && !isFire)
+        {
+            anim.SetInteger("Transition", 0);
+        }
+    }
     void Jump()
     {
         if(Input.GetButtonDown("Jump"))
@@ -66,13 +68,13 @@ public class Controles : MonoBehaviour
             // "!" significa false ex: !isJumpg
             if (!isJumping) 
             {
-                Anim.SetInteger("Transition", 2);
+                anim.SetInteger("Transition", 2);
                 rig.AddForce(new Vector2(0,forcaDoPulo),ForceMode2D.Impulse); //adiciona forca
                 isJumping = true;
             }
         }
     }
-    private void atirarLaser()
+    /*private void atirarLaser()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -85,6 +87,31 @@ public class Controles : MonoBehaviour
             temp.transform.position = localDeDiparo.position;
             temp.GetComponent<Rigidbody2D>().velocity = new Vector2(forcaDoTiro, 0);
             Destroy(temp.gameObject);
+        }
+    }*/
+    void Laser()
+    {
+      StartCoroutine("tiro");
+    }
+
+    IEnumerator tiro()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            isFire = true;
+            anim.SetInteger("Transition", 3);
+            GameObject laser = Instantiate(laserDoJogador, localDeDiparo.position, localDeDiparo.rotation);
+            if (transform.rotation.y == 0)
+            {
+                laser.GetComponent<laserDoJogador>().isRight = true;
+            }
+            if (transform.rotation.y == 180)
+            {
+                laser.GetComponent<laserDoJogador>().isRight = false;
+            }
+            yield return new WaitForSeconds(0.5f);
+            anim.SetInteger("Transition", 0);
+
         }
     }
     void OnCollisionEnter2D(Collision2D coll) // chamado todas as vezes que o player encosta em outro objeto com colisao

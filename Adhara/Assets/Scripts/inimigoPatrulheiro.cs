@@ -7,67 +7,65 @@ public class inimigoPatrulheiro : MonoBehaviour
 {
     
     public float velocidade;
-    //public float distancia;
-    //private bool estaCerto;
-    //public Transform groundCheck;
-    
-    
+    public float tempoDeAndar;
+    private float tempo;
+    public bool andarParaADirecao = true;
+
+    public int vida;
+
+    //private Animator anim;
     public Rigidbody2D rig;
-    private bool faceFlip; //virada de rosto
-    public int vidaAtualDoInimigo;
-    public int vidaMaximaDoInimigo;
+    
+    //public int vidaAtualDoInimigo;
+    //public int vidaMaximaDoInimigo;
     
     
     void Start()
     {
-        vidaAtualDoInimigo = vidaMaximaDoInimigo;
+        //vidaAtualDoInimigo = vidaMaximaDoInimigo;
+        rig = GetComponent<Rigidbody2D>();
+        //anim = GetComponent<Animator>();
     }
 
    
-    void Update()
+    void FixedUpdate()
     {
-       transform.Translate(Vector2.left * velocidade * Time.deltaTime);
-        /*RaycastHit2D ground = Physics2D.Raycast(groundCheck.position, Vector2.down, distancia);
+        tempo += Time.deltaTime;
+        if (tempo >= tempoDeAndar)
+        {
+            andarParaADirecao = !andarParaADirecao;
+            tempo = 0f;
+        }
 
-        if (ground.collider == false)
+        if (andarParaADirecao)
         {
-            if (estaCerto == true)
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                estaCerto = false;
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 180, 0);
-            }
-        }*/
-        FlipEnemy();
-    }
-    private void FlipEnemy()
-    {
-        if(faceFlip)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0,0,0);
+            transform.eulerAngles = new Vector2(0, 180);
+            rig.velocity = Vector2.right * velocidade;
         }
         else
         {
-            gameObject.transform.rotation = Quaternion.Euler(0,180,0);
+            transform.eulerAngles = new Vector2(0, 0);
+            rig.velocity = Vector2.left * velocidade;
         }
+        
     }
-    private void OnCollisionEnter2D(Collision2D col)
+
+    public void Dano(int damage)
     {
-        if (col != null && !col.collider.CompareTag("Player") && !col.collider.CompareTag("chao"))
+        vida -= damage;
+        //anim.SetTrigger("hit");
+
+        if (vida <= 0)
         {
-            faceFlip = !faceFlip;
+            Destroy(gameObject);
         }
-        FlipEnemy();
     }
-    public void MachucarInimigo(int danoParaReceber)
+    /*public void MachucarInimigo(int danoParaReceber)
     {
         vidaAtualDoInimigo -= danoParaReceber;
         if(vidaAtualDoInimigo <= 0)
         {
             Destroy(this.gameObject);
         }
-    }
+    }*/
 }

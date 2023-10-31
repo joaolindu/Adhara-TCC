@@ -10,13 +10,13 @@ public class inimigoVoador : MonoBehaviour
     public float alturaMinima = 1f; // Altura mínima que o inimigo pode alcançar
    
     public bool subindo = true; // Indica se o inimigo está subindo ou descendo
-   
-    public int vidaAtualDoInimigo;
-    public int vidaMaximaDoInimigo;
+    public int vida;
+    //public int vidaAtualDoInimigo;
+    //public int vidaMaximaDoInimigo;
 
     private void Start()
     {
-        vidaAtualDoInimigo = vidaMaximaDoInimigo;
+        
     }
 
     private void Update()
@@ -43,12 +43,14 @@ public class inimigoVoador : MonoBehaviour
             //tempoPassado = 0f;
         }
     }
-    public void MachucarInimigo(int danoParaReceber)
+    public void Dano(int damage)
     {
-        vidaAtualDoInimigo -= danoParaReceber;
-        if(vidaAtualDoInimigo <= 0)
+        vida -= damage;
+        //anim.SetTrigger("hit");
+
+        if (vida <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
     

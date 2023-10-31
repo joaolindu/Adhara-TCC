@@ -1,21 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class laserDoJogador : MonoBehaviour
 {
-    //public float velocidadeDoLaser;
+    public float velocidadeDoLaser;
     public int danoParaDar;
+    
+    
+    public bool isRight;
+    private Rigidbody2D rig;
     void Start()
     {
-        
+        rig = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if (isRight)
+        {
+            rig.velocity = Vector2.right * velocidadeDoLaser; 
+        }
+        else
+        {
+            rig.velocity = Vector2.left * velocidadeDoLaser; 
+        }
+        
         //movimentarLaser();
     }
+    
 
     /*private void movimentarLaser()
     {
@@ -25,8 +40,8 @@ public class laserDoJogador : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            col.gameObject.GetComponent<inimigoVoador>().MachucarInimigo(danoParaDar);
-            col.gameObject.GetComponent<inimigoPatrulheiro>().MachucarInimigo(danoParaDar);
+            col.gameObject.GetComponent<inimigoPatrulheiro>().Dano(danoParaDar);
+            col.gameObject.GetComponent<inimigoVoador>().Dano(danoParaDar);
             Destroy(this.gameObject);
         }
     }
