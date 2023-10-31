@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6692521954104376551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 39.145, y: 3.01, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6692521954657221530}
@@ -152,8 +152,7 @@ MonoBehaviour:
   alturaMaxima: 5
   alturaMinima: 0
   subindo: 0
-  vidaAtualDoInimigo: 3
-  vidaMaximaDoInimigo: 3
+  vida: 0
 --- !u!114 &6692521954104376548
 MonoBehaviour:
   m_ObjectHideFlags: 0

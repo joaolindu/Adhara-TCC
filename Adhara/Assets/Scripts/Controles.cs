@@ -17,6 +17,7 @@ public class Controles : MonoBehaviour
     public float forcaDoTiro; //velocidade do tiro
     private bool isFire;
     private float movement;
+    private Vector3 respwnPoint;
     
     public Rigidbody2D rig;
     private Animator anim;
@@ -26,6 +27,8 @@ public class Controles : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        transform.position = respwnPoint;
     }
     
     // Update is called once per frame
@@ -119,6 +122,14 @@ public class Controles : MonoBehaviour
         if (coll.gameObject.layer == 8)
         {
             isJumping = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "ZonaDeMorte")
+        {
+            transform.position = respwnPoint;
         }
     }
 }

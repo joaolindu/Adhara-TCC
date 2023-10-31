@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - chao
   - CutsCenes
+  - ZonaDeMorte
   layers:
   - Default
   - TransparentFX
