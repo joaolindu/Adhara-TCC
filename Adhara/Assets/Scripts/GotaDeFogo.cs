@@ -13,7 +13,7 @@ public class GotaDeFogo : MonoBehaviour
             Player player = other.GetComponent<Player>();
             if (player != null) // Verifica se o componente "Player" foi encontrado
             {
-                player.ReceberDano();
+                player.ReceberDano(dano: 1);
                 Destroy(gameObject);
                 Debug.Log("ta funcionando");
             }

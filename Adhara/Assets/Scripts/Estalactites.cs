@@ -25,7 +25,7 @@ public class Estalactites : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player>().ReceberDano();
+            other.gameObject.GetComponent<Player>().ReceberDano(dano: 2);
             rig.bodyType = RigidbodyType2D.Dynamic;
             rig.gravityScale = Random.Range(2f, 8f);
             Destroy(this.gameObject, 1.5f);

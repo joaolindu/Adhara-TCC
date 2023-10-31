@@ -7,17 +7,18 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
- 
     public Slider barraDeVidaDoJogador;
-    
+    public int Vidas;
     public int vidaMaxima;
-    public int vidaAtual;
 
+    private Animator anim;
+    
     
     void Start()
     {
+        anim = GetComponent<Animator>();
         //energiaAtual = energiaMaxima;
-        vidaAtual = vidaMaxima;
+        //vidaAtual = vidaMaxima;
         barraDeVidaDoJogador.maxValue = vidaMaxima;
         barraDeVidaDoJogador.value = vidaMaxima;
     }
@@ -28,15 +29,30 @@ public class Player : MonoBehaviour
         
     }
 
-    public void ReceberDano()
+    public void ReceberDano(int dano)
     {
+        Vidas -= dano;
+        barraDeVidaDoJogador.value = Vidas;
+        anim.SetTrigger("hit");
+        if (transform.rotation.y == 0)
+        {
+           
+        }
+        if (transform.rotation.y == 180)
+        {
+            
+        }
+        if (Vidas <= 0)
+        {
+            Debug.Log("Game Over");
+        }
         //energiaAtual -= dano;
-        vidaAtual -= 1;
+        /*vidaAtual -= 1;
         barraDeVidaDoJogador.value = vidaAtual;
         if (vidaAtual <= 0)
         {
             Debug.Log("Game Over");
-        }
+        }*/
     }
 }
 

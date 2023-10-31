@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controles : MonoBehaviour
 { 
@@ -14,21 +15,26 @@ public class Controles : MonoBehaviour
     public GameObject laserDoJogador; //projetil
     public Transform localDeDiparo; //posição q sera disparado o tiro
     private bool tiros;
-    public float forcaDoTiro; //velocidade do tiro
     private bool isFire;
     private float movement;
-    private Vector3 respwnPoint;
-    
+
     public Rigidbody2D rig;
     private Animator anim;
+    private Vector3 respawnPoint;
+    
+    public Slider barraDeVidaDoJogador;
+    public int Vidas;
+    public int vidaMaxima;
    
     
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        barraDeVidaDoJogador.maxValue = vidaMaxima;
+        barraDeVidaDoJogador.value = vidaMaxima;
 
-        transform.position = respwnPoint;
+        transform.position = respawnPoint;
     }
     
     // Update is called once per frame
@@ -77,21 +83,6 @@ public class Controles : MonoBehaviour
             }
         }
     }
-    /*private void atirarLaser()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            isFire = true;
-            Anim.SetInteger("Transition", 3);
-        }
-        if (tiros == true)
-        {
-            GameObject temp = Instantiate(laserDoJogador);
-            temp.transform.position = localDeDiparo.position;
-            temp.GetComponent<Rigidbody2D>().velocity = new Vector2(forcaDoTiro, 0);
-            Destroy(temp.gameObject);
-        }
-    }*/
     void Laser()
     {
       StartCoroutine("tiro");
@@ -117,6 +108,28 @@ public class Controles : MonoBehaviour
 
         }
     }
+
+    /*public void ReceberDano(int dano)
+    {
+        Vidas -= dano;
+        barraDeVidaDoJogador.value = Vidas;
+        anim.SetTrigger("hit");
+        if (transform.rotation.y == 0)
+        {
+
+        }
+
+        if (transform.rotation.y == 180)
+        {
+
+        }
+
+        if (Vidas <= 0)
+        {
+            Debug.Log("Game Over");
+        }
+    }*/
+
     void OnCollisionEnter2D(Collision2D coll) // chamado todas as vezes que o player encosta em outro objeto com colisao
     {
         if (coll.gameObject.layer == 8)
@@ -124,12 +137,11 @@ public class Controles : MonoBehaviour
             isJumping = false;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "ZonaDeMorte")
         {
-            transform.position = respwnPoint;
+            transform.position = respawnPoint;
         }
     }
 }

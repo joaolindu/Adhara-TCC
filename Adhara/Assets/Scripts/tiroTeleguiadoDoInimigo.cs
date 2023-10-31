@@ -48,7 +48,7 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<Player>().ReceberDano();
+            col.gameObject.GetComponent<Player>().ReceberDano(dano: 1);
             Destroy(this.gameObject);
         }
     }
