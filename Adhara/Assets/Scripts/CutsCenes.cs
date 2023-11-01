@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CutsCenes : MonoBehaviour
 {
-    private string[] texto = new string[2];
+    private string[] texto = new string[3];
     private GameObject falas;
     
     
@@ -14,8 +14,9 @@ public class CutsCenes : MonoBehaviour
     void Start()
     {
         StartCoroutine(Rotina());
-        texto[0] = "adhara eh uma et";
-        texto[1] = "que ama os pais!";
+        texto[0] = "Adhara é filha de pais exploradores do espaço...";
+        texto[1] = "a jovem alienígena cresceu longe do planeta em que nasceu...";
+        texto[2] = "agora, herdando o espírito de aventureira de seus parentes, decide percorrer um caminho repleto de perigos para saciar o desejo de conhecer o lugar que foi sua primeira casa...";
 
         falas = GameObject.Find("texto");
         falas.GetComponent<Text>().text = texto[0];
@@ -26,19 +27,14 @@ public class CutsCenes : MonoBehaviour
 
     public IEnumerator Rotina()
     {
-        //habilitar cena
-        GameObject Cenas = GameObject.Find("img" + contador);
+        GameObject Cenas = GameObject.Find("Cenas" + contador);
         Cenas.GetComponent<RawImage>().enabled = true;
         falas.GetComponent<Text>().text = texto[contador];
         contador++;
         
-        //apagar anterior
-        
-        
-        //
         if (contador < 3)
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(1);
             StartCoroutine(Rotina());
         }
         else

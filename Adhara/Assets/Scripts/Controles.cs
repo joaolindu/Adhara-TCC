@@ -31,8 +31,8 @@ public class Controles : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        barraDeVidaDoJogador.maxValue = vidaMaxima;
-        barraDeVidaDoJogador.value = vidaMaxima;
+        //barraDeVidaDoJogador.maxValue = vidaMaxima;
+        //barraDeVidaDoJogador.value = vidaMaxima;
 
         transform.position = respawnPoint;
     }

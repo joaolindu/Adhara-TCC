@@ -19,8 +19,8 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         //energiaAtual = energiaMaxima;
         //vidaAtual = vidaMaxima;
-        barraDeVidaDoJogador.maxValue = vidaMaxima;
-        barraDeVidaDoJogador.value = vidaMaxima;
+        //barraDeVidaDoJogador.maxValue = vidaMaxima;
+        //barraDeVidaDoJogador.value = vidaMaxima;
     }
 
     // Update is called once per frame

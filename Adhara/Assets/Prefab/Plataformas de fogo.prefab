@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375766571197217823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plataformas de fogo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375766571280007805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ponto A
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 7375766572071469358}
   - component: {fileID: 7375766572071469359}
   - component: {fileID: 7375766572071469356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plataforma cima e baixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375766572182118222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ponto B
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}

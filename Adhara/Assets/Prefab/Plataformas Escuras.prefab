@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375766571197217823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plataformas Escuras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375766571280007805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ponto A
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 7375766572071469358}
   - component: {fileID: 7375766572071469359}
   - component: {fileID: 7375766572071469356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plataforma cima e baixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,18 +165,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0041788816, y: 0.024188608}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 80.0662, y: 18.14}
+    oldSize: {x: 4.00331, y: 0.907}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.6865375, y: 0.77197677}
   m_EdgeRadius: 0
 --- !u!50 &7375766572071469359
 Rigidbody2D:
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7375766572182118222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ponto B
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
