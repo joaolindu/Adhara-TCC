@@ -22,19 +22,25 @@ public class Controles : MonoBehaviour
     private Animator anim;
     private Vector3 respawnPoint;
     
+    //vida
     public Slider barraDeVidaDoJogador;
-    public int Vidas;
-    public int vidaMaxima;
-   
-    
+   public int vidaMaxima;
+    public int vidasAtual = 5;
+
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //barraDeVidaDoJogador.maxValue = vidaMaxima;
-        //barraDeVidaDoJogador.value = vidaMaxima;
+        
+        vidasAtual = vidaMaxima;
+        barraDeVidaDoJogador.maxValue = vidaMaxima;
+        barraDeVidaDoJogador.value = vidaMaxima;
+        GameController.instance.atualizarVidas(vidasAtual);
 
         transform.position = respawnPoint;
+        
+        
     }
     
     // Update is called once per frame
@@ -109,26 +115,25 @@ public class Controles : MonoBehaviour
         }
     }
 
-    /*public void ReceberDano(int dano)
+    public void ReceberDano(int danoParaReceber)
     {
-        Vidas -= dano;
-        barraDeVidaDoJogador.value = Vidas;
+        vidasAtual -= danoParaReceber;
         anim.SetTrigger("hit");
-        if (transform.rotation.y == 0)
+        barraDeVidaDoJogador.value = vidasAtual;
+        
+        /*if (transform.rotation.y == 0)
         {
-
+            transform.position += new Vector3(-0.5f, 0, 0);
         }
-
         if (transform.rotation.y == 180)
         {
-
-        }
-
-        if (Vidas <= 0)
+            transform.position += new Vector3(0.5f, 0, 0);
+        }*/
+        if (vidasAtual <= 0)
         {
-            Debug.Log("Game Over");
+            Debug.Log("game over!");
         }
-    }*/
+    }
 
     void OnCollisionEnter2D(Collision2D coll) // chamado todas as vezes que o player encosta em outro objeto com colisao
     {

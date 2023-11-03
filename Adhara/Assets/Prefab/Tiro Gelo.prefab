@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4286696151561382551}
   - component: {fileID: 5372716654777008831}
   - component: {fileID: 5784851531631957931}
+  - component: {fileID: 8612717744026841691}
   m_Layer: 0
   m_Name: Tiro Gelo
   m_TagString: Untagged
@@ -164,3 +165,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.099999994
+--- !u!114 &8612717744026841691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794348428501847573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86575ba5dd5a71d4aaf32251a5ed80a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeDoLaser: 3
+  danoParaDar: 1

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2977185716862252947}
   - component: {fileID: 2977185716862252945}
   - component: {fileID: 2977185716862252959}
-  - component: {fileID: 2977185716862252953}
   - component: {fileID: 432324104}
   - component: {fileID: 4251641472995394340}
   m_Layer: 0
@@ -154,23 +153,10 @@ MonoBehaviour:
   forcaDoPulo: 15
   laserDoJogador: {fileID: 223916827526113329, guid: fdaa61be5baa1ac43bcfa73122588adc, type: 3}
   localDeDiparo: {fileID: 7520072324893605370}
-  forcaDoTiro: 3
   rig: {fileID: 2977185716862252945}
---- !u!114 &2977185716862252953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2977185716862252950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13115d4f0addce74b9fd3ced1d9b1e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   barraDeVidaDoJogador: {fileID: 0}
-  vidaMaxima: 3
-  vidaAtual: 0
+  vidaMaxima: 5
+  vidasAtual: 5
 --- !u!114 &432324104
 MonoBehaviour:
   m_ObjectHideFlags: 0

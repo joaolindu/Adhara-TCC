@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisor: {fileID: 6439871052984759247}
+  danoParaDar: 2
 --- !u!1 &6439871053525869503
 GameObject:
   m_ObjectHideFlags: 0

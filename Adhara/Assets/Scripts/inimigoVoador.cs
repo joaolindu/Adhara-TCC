@@ -11,6 +11,8 @@ public class inimigoVoador : MonoBehaviour
    
     public bool subindo = true; // Indica se o inimigo está subindo ou descendo
     public int vida;
+    public int danoo;
+    
     //public int vidaAtualDoInimigo;
     //public int vidaMaximaDoInimigo;
 
@@ -51,6 +53,13 @@ public class inimigoVoador : MonoBehaviour
         if (vida <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<Controles>().ReceberDano(danoo);
         }
     }
     

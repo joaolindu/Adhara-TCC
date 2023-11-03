@@ -8,6 +8,8 @@ public class Estalactites : MonoBehaviour
 {
     private Rigidbody2D rig;
     public Collider2D collisor;
+
+    public int danoParaDar;
     
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,7 @@ public class Estalactites : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player>().ReceberDano(dano: 2);
+            other.gameObject.GetComponent<Controles>().ReceberDano(danoParaDar);
             rig.bodyType = RigidbodyType2D.Dynamic;
             rig.gravityScale = Random.Range(2f, 8f);
             Destroy(this.gameObject, 1.5f);

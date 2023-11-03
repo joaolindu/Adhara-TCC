@@ -12,12 +12,10 @@ public class inimigoPatrulheiro : MonoBehaviour
     public bool andarParaADirecao = true;
 
     public int vida;
+    public int danoo = 1;
 
     //private Animator anim;
     public Rigidbody2D rig;
-    
-    //public int vidaAtualDoInimigo;
-    //public int vidaMaximaDoInimigo;
     
     
     void Start()
@@ -60,12 +58,12 @@ public class inimigoPatrulheiro : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    /*public void MachucarInimigo(int danoParaReceber)
+
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        vidaAtualDoInimigo -= danoParaReceber;
-        if(vidaAtualDoInimigo <= 0)
+        if (col.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            col.gameObject.GetComponent<Controles>().ReceberDano(danoo);
         }
-    }*/
+    }
 }

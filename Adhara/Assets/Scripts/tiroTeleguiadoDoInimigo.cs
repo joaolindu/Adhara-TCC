@@ -14,7 +14,9 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
 
     private SpriteRenderer _renderer;
 
-    // Start is called before the first frame update
+    public int danoParaDar;
+
+    
     void Start()
     {
         _Player = GameObject.FindWithTag("Player").transform;
@@ -22,7 +24,7 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
         TryGetComponent(out _renderer);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         _renderer.flipX = _Player.position.x >= transform.position.x;
@@ -34,8 +36,6 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
         GameObject temporaria = Instantiate(laserDoInimigo, localDeDisparo.position, quaternion.identity);
         localDeDisparo.LookAt(_Player);
         temporaria.GetComponent<Rigidbody2D>().velocity = localDeDisparo.forward * 3;
-       
-
     }
 
     IEnumerator Atirar()
@@ -44,11 +44,13 @@ public class tiroTeleguiadoDoInimigo : MonoBehaviour
         TiroTeleguiado();
         StartCoroutine("Atirar");
     }
+    
+    
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<Player>().ReceberDano(dano: 1);
+            col.gameObject.GetComponent<Controles>().ReceberDano(danoParaDar);
             Destroy(this.gameObject);
         }
     }
