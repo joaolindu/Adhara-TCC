@@ -152,7 +152,8 @@ MonoBehaviour:
   alturaMaxima: 4
   alturaMinima: 1
   subindo: 1
-  vida: 0
+  vida: 4
+  danoo: 0
 --- !u!114 &304533427177675912
 MonoBehaviour:
   m_ObjectHideFlags: 0

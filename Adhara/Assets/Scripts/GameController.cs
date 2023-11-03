@@ -8,6 +8,9 @@ public class GameController : MonoBehaviour
 
     public Text textoVidas;
     public static GameController instance;
+
+    public int quantidade;
+    public Text textoColetaveis;
     
     // Awak eh chamado antes de todos os metodos start()
     void Awake()
@@ -21,8 +24,14 @@ public class GameController : MonoBehaviour
         
     }
 
-    public void atualizarVidas(int valor)
+    public void atualizarColetaveis(int valorColetaveis)
+    {
+        quantidade += valorColetaveis;
+        textoColetaveis.text = quantidade.ToString();
+    }
+
+    /*public void atualizarVidas(int valor)
     {
         textoVidas.text = "x " + valor.ToString();
-    }
+    }*/
 }

@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 4
+  tempoDeAndar: 0
+  andarParaADirecao: 1
+  vida: 2
+  danoo: 1
   rig: {fileID: 5857096797657573161}
-  vidaAtualDoInimigo: 3
-  vidaMaximaDoInimigo: 0

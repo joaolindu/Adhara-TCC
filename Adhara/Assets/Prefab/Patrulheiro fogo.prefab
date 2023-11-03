@@ -121,9 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 3
+  tempoDeAndar: 0
+  andarParaADirecao: 1
+  vida: 3
+  danoo: 1
   rig: {fileID: 8245867129550514950}
-  vidaAtualDoInimigo: 3
-  vidaMaximaDoInimigo: 0
 --- !u!61 &3095401536163403477
 BoxCollider2D:
   m_ObjectHideFlags: 0

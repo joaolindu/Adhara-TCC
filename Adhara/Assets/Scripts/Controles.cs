@@ -36,7 +36,7 @@ public class Controles : MonoBehaviour
         vidasAtual = vidaMaxima;
         barraDeVidaDoJogador.maxValue = vidaMaxima;
         barraDeVidaDoJogador.value = vidaMaxima;
-        GameController.instance.atualizarVidas(vidasAtual);
+        //GameController.instance.atualizarVidas(vidasAtual);
 
         transform.position = respawnPoint;
         

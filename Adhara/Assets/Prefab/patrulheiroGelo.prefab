@@ -149,5 +149,6 @@ MonoBehaviour:
   velocidade: 4
   tempoDeAndar: 3
   andarParaADirecao: 1
-  vida: 3
+  vida: 2
+  danoo: 1
   rig: {fileID: 5322100051181796274}
