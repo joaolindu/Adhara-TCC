@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 1660897390}
   - component: {fileID: 1660897389}
   m_Layer: 5
-  m_Name: Cena2
+  m_Name: Cenas1
   m_TagString: CutsCenes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 1763780760}
   - component: {fileID: 1763780759}
   m_Layer: 5
-  m_Name: Cena1
+  m_Name: Cenas0
   m_TagString: CutsCenes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 1802244249}
   - component: {fileID: 1802244248}
   m_Layer: 5
-  m_Name: Cena3
+  m_Name: Cenas2
   m_TagString: CutsCenes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -754,8 +754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -183}
-  m_SizeDelta: {x: 468.8582, y: 87.9109}
+  m_AnchoredPosition: {x: -0.0032958984, y: -315.97083}
+  m_SizeDelta: {x: 1920, y: 353.8525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875764702
 MonoBehaviour:
@@ -778,13 +778,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ea5a86a7f17c92f4db35780fd99ea370, type: 3}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

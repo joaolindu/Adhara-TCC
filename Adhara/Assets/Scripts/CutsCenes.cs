@@ -28,7 +28,7 @@ public class CutsCenes : MonoBehaviour
     public IEnumerator Rotina()
     {
         GameObject Cenas = GameObject.Find("Cenas" + contador);
-        Cenas.GetComponent<RawImage>().enabled = true;
+        Cenas.GetComponent<RawImage>().enabled = false;
         falas.GetComponent<Text>().text = texto[contador];
         contador++;
         

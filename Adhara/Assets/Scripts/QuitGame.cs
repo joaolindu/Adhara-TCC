@@ -26,5 +26,6 @@ public class QuitGame : MonoBehaviour
     public void Iniciar()
     {
         SceneManager.LoadScene(1);
+        //GameManager.instance.Cenas();
     }
 }

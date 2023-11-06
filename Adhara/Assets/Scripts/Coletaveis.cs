@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Coletaveis : MonoBehaviour
 {
-    public int valorDePontuacao;
+    private int valorDePontuacao;
     public Text textoDosColetaveis;
 
     private void Start()
@@ -35,6 +35,6 @@ public class Coletaveis : MonoBehaviour
         {
             GameController.instance.atualizarColetaveis(valorDePontuacao);
             Destroy(gameObject);
-        }
-    }*/
+        }  }*/
 }
+

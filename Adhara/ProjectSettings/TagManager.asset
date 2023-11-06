@@ -10,6 +10,8 @@ TagManager:
   - CutsCenes
   - ZonaDeMorte
   - Coletavel
+  - ColetavelGota
+  - PlayerStart
   layers:
   - Default
   - TransparentFX

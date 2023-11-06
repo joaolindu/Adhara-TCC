@@ -131,7 +131,7 @@ public class Controles : MonoBehaviour
         }*/
         if (vidasAtual <= 0)
         {
-            Debug.Log("game over!");
+            GameController.instance.GameOver();
         }
     }
 
