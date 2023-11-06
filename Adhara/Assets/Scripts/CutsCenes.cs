@@ -20,26 +20,35 @@ public class CutsCenes : MonoBehaviour
 
         falas = GameObject.Find("texto");
         falas.GetComponent<Text>().text = texto[0];
-       
+
     }
 
     private int contador = 0;
 
     public IEnumerator Rotina()
     {
-        GameObject Cenas = GameObject.Find("Cenas" + contador);
-        Cenas.GetComponent<RawImage>().enabled = false;
-        falas.GetComponent<Text>().text = texto[contador];
-        contador++;
-        
         if (contador < 3)
         {
+            GameObject Cenas = GameObject.Find("Cenas" + contador);
+        
+            if (Cenas != null)
+            {
+                Cenas.GetComponent<RawImage>().enabled = false;
+                falas.GetComponent<Text>().text = texto[contador];
+                contador++;
+            }
+            else
+            {
+                Debug.LogError("Objeto 'Cenas" + contador + "' não foi encontrado na cena.");
+            }
+
             yield return new WaitForSeconds(1);
             StartCoroutine(Rotina());
         }
         else
         {
-            SceneManager.LoadScene("FaseEscura_1");
+            SceneManager.LoadScene("FaseEscura_1"); // Substitua "NomeDaSuaCena" pelo nome da cena que deseja carregar.
         }
     }
+
 }
