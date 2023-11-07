@@ -11,7 +11,7 @@ public class inimigoVoador : MonoBehaviour
    
     public bool subindo = true; // Indica se o inimigo está subindo ou descendo
     public int vida;
-    public int danoo;
+    private int danoo;
     
     //public int vidaAtualDoInimigo;
     //public int vidaMaximaDoInimigo;

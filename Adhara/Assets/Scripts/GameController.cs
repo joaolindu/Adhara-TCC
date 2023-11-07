@@ -64,9 +64,4 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
-    /*public void atualizarVidas(int valor)
-    {
-        textoVidas.text = "x " + valor.ToString();
-    }*/
 }
