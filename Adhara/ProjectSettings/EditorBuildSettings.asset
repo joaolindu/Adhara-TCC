@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Inicializacao.unity
-    guid: 66fd7d5b83262de4486415cc35ddbc08
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 3914a0231afe9834e986d39cafbaa526
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 003b24f08ba6c73488300807a691da27
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CutsCenes.unity
     guid: 33d845944edb0b94ba440c5fed08b1ab
   - enabled: 1
@@ -26,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FaseMagma_3.unity
     guid: 91abac7e9135aee47892189046083b9f
-  - enabled: 0
-    path: Assets/Scenes/Interface.unity
-    guid: dccfb0138d1690346a334bf8d71d592d
   m_configObjects: {}
