@@ -63,17 +63,17 @@ public class Controles : MonoBehaviour
         
         if (movement > 0 && !isJumping) //se move para a direita
         {
-            anim.SetInteger("Transition", 1);
+            if(!isFire) anim.SetInteger("Transition", 1);
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        if (movement < 0 && !isJumping && !isFire) //se move para a esquerda
+        if (movement < 0 && !isJumping) //se move para a esquerda
         {
-            anim.SetInteger("Transition", 1);
+            if(!isFire) anim.SetInteger("Transition", 1);
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        if (movement == 0 && !isJumping && !isFire)
+        if (movement == 0 && !isJumping)
         {
-            anim.SetInteger("Transition", 0);
+            if(!isFire) anim.SetInteger("Transition", 0);
         }
     }
     void Jump()
@@ -111,6 +111,7 @@ public class Controles : MonoBehaviour
             }
             yield return new WaitForSeconds(0.5f);
             anim.SetInteger("Transition", 0);
+            isFire = false;
 
         }
     }
