@@ -14,7 +14,7 @@ public class inimigoPatrulheiro : MonoBehaviour
     public int vida;
     public int danoo = 1;
 
-    //private Animator anim;
+    private Animator anim;
     public Rigidbody2D rig;
     
     
@@ -51,7 +51,7 @@ public class inimigoPatrulheiro : MonoBehaviour
     public void Dano(int damage)
     {
         vida -= damage;
-        //anim.SetTrigger("hit");
+        anim.SetTrigger("hit");
 
         if (vida <= 0)
         {

@@ -13,7 +13,7 @@ public class CutsCenes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Rotina());
+        StartCoroutine(rotina());
         texto[0] = "Adhara é filha de pais exploradores do espaço...";
         texto[1] = "a jovem alienígena cresceu longe do planeta em que nasceu...";
         texto[2] = "agora, herdando o espírito de aventureira de seus parentes, decide percorrer um caminho repleto de perigos para saciar o desejo de conhecer o lugar que foi sua primeira casa...";
@@ -23,32 +23,23 @@ public class CutsCenes : MonoBehaviour
 
     }
 
-    private int contador = 0;
+    int contador = 0;
 
-    public IEnumerator Rotina()
+    public IEnumerator rotina()
     {
+        GameObject Cenas = GameObject.Find("Cenas" + contador);
+        Cenas.GetComponent<RawImage>().enabled = false;
+        falas.GetComponent<Text>().text = texto[contador];
+        contador++;
+
         if (contador < 3)
         {
-            GameObject Cenas = GameObject.Find("Cenas" + contador);
-        
-            if (Cenas != null)
-            {
-                Cenas.GetComponent<RawImage>().enabled = false;
-                falas.GetComponent<Text>().text = texto[contador];
-                contador++;
-            }
-            else
-            {
-                Debug.LogError("Objeto 'Cenas" + contador + "' não foi encontrado na cena.");
-            }
-
             yield return new WaitForSeconds(1);
-            StartCoroutine(Rotina());
+            StartCoroutine(rotina());
         }
         else
         {
-            SceneManager.LoadScene("FaseEscura_1"); // Substitua "NomeDaSuaCena" pelo nome da cena que deseja carregar.
+            SceneManager.LoadScene("FaseEscura_1");
         }
     }
-
 }
