@@ -52,7 +52,6 @@ public class inimigoPatrulheiro : MonoBehaviour
     {
         vida -= damage;
         anim.SetTrigger("hit");
-
         if (vida <= 0)
         {
             Destroy(gameObject);

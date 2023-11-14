@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddce514b039b86649b455e3c902eef85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaPraCarregar: FaseEscura_1
+  cenaPraCarregar: LevelSelect
 --- !u!1 &1489308999
 GameObject:
   m_ObjectHideFlags: 0
