@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3587199579385993660}
   - component: {fileID: 3676185626367236688}
   - component: {fileID: 304533427177675912}
+  - component: {fileID: 8558230938452027341}
   m_Layer: 0
   m_Name: voador de fogo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,12 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a281bd5b8d35946a7c6f373d6400b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
+  velocidade: 3
   alturaMaxima: 4
   alturaMinima: 1
   subindo: 1
   vida: 4
-  danoo: 0
 --- !u!114 &304533427177675912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +171,26 @@ MonoBehaviour:
   localDeDisparo: {fileID: 1740836589161823279}
   _Player: {fileID: 2977185716862252956, guid: d23fd4ce6b9110148b7e948e0ec71ac6, type: 3}
   danoParaDar: 1
+--- !u!95 &8558230938452027341
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5855675915153485746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4bcd80f88caf62c40b160aba3b757063, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8059764513507021623
 GameObject:
   m_ObjectHideFlags: 0
