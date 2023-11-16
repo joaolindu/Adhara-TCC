@@ -51,9 +51,11 @@ public class inimigoPatrulheiro : MonoBehaviour
     public void Dano(int damage)
     {
         vida -= damage;
-        anim.SetTrigger("hit");
+        //anim.SetTrigger("trasition");
+        //anim.SetInteger("Transition", 0);
         if (vida <= 0)
         {
+            EfeitosSonoros.instance.danoNaAdhara.Play();
             Destroy(gameObject);
         }
     }
@@ -62,6 +64,7 @@ public class inimigoPatrulheiro : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            EfeitosSonoros.instance.danoNaAdhara.Play();
             col.gameObject.GetComponent<Controles>().ReceberDano(danoo);
         }
     }

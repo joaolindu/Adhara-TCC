@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8730314236353367712}
   - component: {fileID: 8730314236353367713}
   - component: {fileID: 8730314236353367714}
+  - component: {fileID: 8449093198924826464}
   - component: {fileID: 7613474811007806889}
   m_Layer: 0
   m_Name: PassarDeFase
@@ -125,6 +126,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e8d9ef67dcae345ba94a46350538af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8449093198924826464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8730314236353367715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddce514b039b86649b455e3c902eef85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cenaPraCarregar: LevelSelect
 --- !u!95 &7613474811007806889
 Animator:
   serializedVersion: 4

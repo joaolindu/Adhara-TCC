@@ -40,9 +40,10 @@ public class laserDoJogador : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            col.gameObject.GetComponent<inimigoPatrulheiro>().Dano(danoParaDar);
-            col.gameObject.GetComponent<inimigoVoador>().Dano(danoParaDar);
+            //col.GetComponent<inimigoVoador>().Dano(danoParaDar);
+            col.GetComponent<inimigoPatrulheiro>().Dano(danoParaDar);
             Destroy(this.gameObject);
         }
+        
     }
 }

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442e473ae1e4dab4bb5203d71646d568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forcaDoPulo: 15
+  forcaDoPulo: 20
 --- !u!95 &4142134278457399683
 Animator:
   serializedVersion: 4

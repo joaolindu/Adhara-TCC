@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5322100051181796277}
   - component: {fileID: 5322100051181796274}
   - component: {fileID: 5322100051181796275}
-  - component: {fileID: 6088113531228368553}
   m_Layer: 0
   m_Name: patrulheiroGelo
   m_TagString: Enemy
@@ -153,23 +152,3 @@ MonoBehaviour:
   vida: 2
   danoo: 1
   rig: {fileID: 5322100051181796274}
---- !u!95 &6088113531228368553
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5322100051181796272}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 57a2d25139c521448b1b027b8674c4c6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

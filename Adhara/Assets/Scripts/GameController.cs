@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOver.SetActive(true);
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
     }
 
     public void restartGame()

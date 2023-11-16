@@ -29,6 +29,7 @@ public class LaserDoInimigo : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             col.gameObject.GetComponent<Controles>().ReceberDano(danoParaDar);
+            EfeitosSonoros.instance.danoNaAdhara.Play();
             Destroy(this.gameObject);
         }
     }

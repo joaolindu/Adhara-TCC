@@ -23,6 +23,7 @@ public class Coletaveis2 : MonoBehaviour
         if (col.CompareTag("ColetavelGota") == true)
         {
             valorDePontuacao = valorDePontuacao + 1;
+            EfeitosSonoros.instance.ColetavelGota.Play();
             Destroy(col.gameObject);
         }
     }

@@ -86,6 +86,7 @@ public class Controles : MonoBehaviour
                 anim.SetInteger("Transition", 2);
                 rig.AddForce(new Vector2(0,forcaDoPulo),ForceMode2D.Impulse); //adiciona forca
                 isJumping = true;
+                EfeitosSonoros.instance.puloAdhara.Play();
             }
         }
     }
@@ -112,7 +113,7 @@ public class Controles : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             anim.SetInteger("Transition", 0);
             isFire = false;
-
+            EfeitosSonoros.instance.laserAdhara.Play();
         }
     }
 

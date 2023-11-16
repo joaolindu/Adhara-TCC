@@ -24,6 +24,7 @@ public class trampolin : MonoBehaviour
         if(col.gameObject.CompareTag("Player"))
         {
             anim.SetTrigger("pulo");
+            EfeitosSonoros.instance.trampolim.Play();
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, forcaDoPulo), ForceMode2D.Impulse);
         }
     }
