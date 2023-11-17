@@ -12,6 +12,7 @@ TagManager:
   - Coletavel
   - ColetavelGota
   - PlayerStart
+  - InimigoVoador
   layers:
   - Default
   - TransparentFX

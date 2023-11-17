@@ -49,9 +49,9 @@ public class inimigoVoador : MonoBehaviour
     {
         vida -= damage;
         //anim.SetTrigger("hit");
-
         if (vida <= 0)
         {
+            EfeitosSonoros.instance.danoNaAdhara.Play();
             Destroy(gameObject);
         }
     }
@@ -59,6 +59,7 @@ public class inimigoVoador : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            EfeitosSonoros.instance.danoNaAdhara.Play();
             col.gameObject.GetComponent<Controles>().ReceberDano(danoo);
         }
     }

@@ -58,8 +58,9 @@ public class GameController : MonoBehaviour
     {
         gameOver.SetActive(true);
         Time.timeScale = 0f;
-    } 
-    private void restartGame()
+    }
+
+    public void restartGame()
     {
         SceneManager.LoadScene(0);
     }
