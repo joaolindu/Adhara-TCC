@@ -27,8 +27,10 @@ public class Coletaveis : MonoBehaviour
             valorDePontuacao = valorDePontuacao + 1;
             EfeitosSonoros.instance.Coletavel.Play();
             
+            Destroy(col.gameObject, 0.1f);
+            
         }
-        Destroy(col.gameObject);
+        
     }
 
 
