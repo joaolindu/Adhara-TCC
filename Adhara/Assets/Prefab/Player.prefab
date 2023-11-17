@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00492a03e1551fb4db5900ba63123401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
+  velocidade: 5.5
   forcaDoPulo: 15
   laserDoJogador: {fileID: 223916827526113329, guid: fdaa61be5baa1ac43bcfa73122588adc, type: 3}
   localDeDiparo: {fileID: 7520072324893605370}
