@@ -39,8 +39,6 @@ public class Controles : MonoBehaviour
         //GameController.instance.atualizarVidas(vidasAtual);
 
         transform.position = respawnPoint;
-        
-        
     }
     
     // Update is called once per frame
