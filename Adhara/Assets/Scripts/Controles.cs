@@ -88,7 +88,7 @@ public class Controles : MonoBehaviour
                 isJumping = true;
                 EfeitosSonoros.instance.puloAdhara.Play();
             }
-        }
+        } 
     }
     void Laser()
     {

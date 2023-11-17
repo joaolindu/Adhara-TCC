@@ -24,7 +24,7 @@ public class Coletaveis2 : MonoBehaviour
         {
             valorDePontuacao = valorDePontuacao + 1;
             EfeitosSonoros.instance.ColetavelGota.Play();
-            Destroy(col.gameObject);
         }
+        Destroy(col.gameObject);
     }
 }

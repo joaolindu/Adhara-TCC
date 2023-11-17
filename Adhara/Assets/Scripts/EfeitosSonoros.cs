@@ -6,7 +6,7 @@ using UnityEngine;
 public class EfeitosSonoros : MonoBehaviour
 {
     public static EfeitosSonoros instance;
-    public AudioSource laserAdhara, ColetavelRaio, ColetavelGota, danoNaAdhara, puloAdhara, trampolim;
+    public AudioSource laserAdhara, Coletavel, ColetavelGota, danoNaAdhara, puloAdhara, trampolim;
 
     private void Awake()
     {

@@ -23,10 +23,12 @@ public class Coletaveis : MonoBehaviour
     {
         if (col.CompareTag("Coletavel") == true)
         {
-            EfeitosSonoros.instance.ColetavelRaio.Play();
+           
             valorDePontuacao = valorDePontuacao + 1;
-            Destroy(col.gameObject);
+            EfeitosSonoros.instance.Coletavel.Play();
+            
         }
+        Destroy(col.gameObject);
     }
 
 
