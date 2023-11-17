@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 54f526d824c545448b31534c0a17fc40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,9 +122,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0061083026, y: -0.007940823}
   serializedVersion: 2
-  m_Radius: 0.15999998
+  m_Radius: 0.08731115
 --- !u!114 &3536760103725059343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434bfd61887920e47a38778340a98e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoDeVida: 3
+  tempoDeVida: 2
 --- !u!114 &9168646328202101113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,5 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86575ba5dd5a71d4aaf32251a5ed80a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeDoLaser: 3
   danoParaDar: 1

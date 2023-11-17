@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ef2372c403b96b64fa9bd51352efad72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a281bd5b8d35946a7c6f373d6400b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 2
-  alturaMaxima: 5
+  velocidade: 3
+  alturaMaxima: 4
   alturaMinima: 0
   subindo: 0
   vida: 3
@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6692521954657221525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.01, y: -1.46, z: 0}
+  m_LocalPosition: {x: -0.12, y: -1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

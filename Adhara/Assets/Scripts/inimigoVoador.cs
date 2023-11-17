@@ -62,6 +62,5 @@ public class inimigoVoador : MonoBehaviour
             col.gameObject.GetComponent<Controles>().ReceberDano(danoo);
         }
     }
-    
 }
 

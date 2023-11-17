@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PassarDeFase : MonoBehaviour
 {
+    
+    public string cenaPraCarregar;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,8 @@ public class PassarDeFase : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(cenaPraCarregar);
         }
     }
 }

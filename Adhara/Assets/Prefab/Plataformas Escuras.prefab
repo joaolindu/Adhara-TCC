@@ -140,7 +140,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d0bd7537c65d1794caadf25b6f01f04f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcec380de0cf8b4dab96bb3d1a752ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velociade: 3
+  velociade: 2
   pontoA: {fileID: 7375766571280007805}
   pontoB: {fileID: 7375766572182118222}
 --- !u!1 &7375766572182118223

@@ -27,22 +27,13 @@ public class laserDoJogador : MonoBehaviour
         {
             rig.velocity = Vector2.left * velocidadeDoLaser; 
         }
-        
-        //movimentarLaser();
     }
-    
-
-    /*private void movimentarLaser()
-    {
-        transform.Translate(Vector3.up * velocidadeDoLaser * Time.deltaTime);
-    }*/
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
             col.GetComponent<inimigoVoador>().Dano(danoParaDar);
-            Destroy(gameObject);
-            col.GetComponent<inimigoPatrulheiro>().Dano(danoParaDar);
+            //col.GetComponent<inimigoPatrulheiro>().Dano(danoParaDar);
             Destroy(gameObject);
         }
     }
