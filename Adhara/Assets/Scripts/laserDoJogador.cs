@@ -50,6 +50,5 @@ public class laserDoJogador : MonoBehaviour
            
            Destroy(gameObject);
        }
-       
     }*/
 }

@@ -144,7 +144,11 @@ public class Controles : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "ZonaDeMorte")
+        /*if (col.tag == "ZonaDeMorte")
+        {
+            transform.position = respawnPoint;
+        } */
+        if (col.CompareTag("ZonaDeMorte"))
         {
             transform.position = respawnPoint;
         }
