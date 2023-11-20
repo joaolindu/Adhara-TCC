@@ -8,7 +8,7 @@ public class PlataformasQueCaem : MonoBehaviour
 
     private Rigidbody2D rig;
 
-    private float fallDelay;
+    public float fallDelay;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class PlataformasQueCaem : MonoBehaviour
 
     IEnumerator Fall()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(2f);
         rig.bodyType = RigidbodyType2D.Dynamic;
         Destroy(gameObject, fallDelay);
     }

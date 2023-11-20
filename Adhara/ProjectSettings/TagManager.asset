@@ -13,6 +13,7 @@ TagManager:
   - ColetavelGota
   - PlayerStart
   - InimigoVoador
+  - respawnPoint
   layers:
   - Default
   - TransparentFX

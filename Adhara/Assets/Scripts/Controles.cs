@@ -24,7 +24,7 @@ public class Controles : MonoBehaviour
     
     //vida
     public Slider barraDeVidaDoJogador;
-   public int vidaMaxima;
+    public int vidaMaxima;
     public int vidasAtual = 5;
 
 
